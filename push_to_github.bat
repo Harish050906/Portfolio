@@ -20,9 +20,9 @@ echo Committing changes...
 git commit -m "Update portfolio images, slider UX, and README setup instructions"
 
 echo.
-echo Pushing to GitHub (main branch)...
+echo Pushing to GitHub (main branch - force update)...
 git branch -M main
-git push -u origin main
+git push -u origin main --force
 
 echo.
 echo Process complete!
