@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-dark-900 text-gray-100 flex flex-col selection:bg-brand-purple selection:text-white">
-      
+
       {/* Header/Navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-white/5 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -67,16 +67,16 @@ export default function App() {
 
           <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto glassmorphism-card border border-white/5 rounded-3xl p-8 md:p-12 shadow-2xl relative">
-              
+
               {/* Neon border lines */}
               <div className="absolute top-0 right-1/4 left-1/4 h-[1px] bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                
+
                 {/* Contact Text */}
                 <div className="text-left space-y-6">
                   <div>
-                    <span className="text-xs font-mono tracking-widest text-brand-purple uppercase">CONNECTION_PORT</span>
+                    <span className="text-xs font-mono tracking-widest text-brand-purple uppercase">LET'S CONNECT !</span>
                     <h2 className="text-3xl font-extrabold text-white mt-2 tracking-tight">
                       Let's Build Something <br />
                       <span className="bg-gradient-to-r from-brand-purple to-brand-cyan bg-clip-text text-transparent">Impactful.</span>
@@ -87,17 +87,17 @@ export default function App() {
                   </p>
 
                   <div className="flex gap-4">
-                    <a 
-                      href="https://www.linkedin.com/in/harisha77/" 
-                      target="_blank" 
+                    <a
+                      href="https://www.linkedin.com/in/harisha77/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-white/5 border border-white/5 hover:border-brand-purple/30 text-gray-400 hover:text-white transition-all hover:scale-105"
                     >
                       <Linkedin size={18} />
                     </a>
-                    <a 
-                      href="https://github.com/Harish050906" 
-                      target="_blank" 
+                    <a
+                      href="https://github.com/Harish050906"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 rounded-full bg-white/5 border border-white/5 hover:border-brand-cyan/30 text-gray-400 hover:text-white transition-all hover:scale-105"
                     >
@@ -108,31 +108,31 @@ export default function App() {
 
                 {/* Contact Data Details */}
                 <div className="flex flex-col justify-center space-y-6">
-                  
+
                   {/* Phone */}
-                  <a 
-                    href="tel:+919344842019" 
+                  <a
+                    href="tel:+919344842019"
                     className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-purple/20 hover:bg-white/10 transition-all group"
                   >
                     <div className="p-3 rounded-xl bg-brand-purple/10 border border-brand-purple/20 group-hover:scale-110 transition-transform">
                       <Phone className="w-5 h-5 text-brand-purple" />
                     </div>
                     <div className="text-left">
-                      <div className="text-[10px] font-mono text-gray-400">PHONE_CHANNEL</div>
+                      <div className="text-[10px] font-mono text-gray-400">PHONE_NO</div>
                       <div className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">+91 9344842019</div>
                     </div>
                   </a>
 
                   {/* Email */}
-                  <a 
-                    href="mailto:harisha.aiml2024@citchennai.net" 
+                  <a
+                    href="mailto:harisha.aiml2024@citchennai.net"
                     className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-cyan/20 hover:bg-white/10 transition-all group"
                   >
                     <div className="p-3 rounded-xl bg-brand-cyan/10 border border-brand-cyan/20 group-hover:scale-110 transition-transform">
                       <Mail className="w-5 h-5 text-brand-cyan" />
                     </div>
                     <div className="text-left">
-                      <div className="text-[10px] font-mono text-gray-400">SMTP_MAILBOX</div>
+                      <div className="text-[10px] font-mono text-gray-400">GMAIL</div>
                       <div className="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">harisha.aiml2024@citchennai.net</div>
                     </div>
                   </a>
@@ -152,8 +152,8 @@ export default function App() {
             &copy; {new Date().getFullYear()} HARISH A. All Rights Reserved.
           </div>
           <div className="flex items-center gap-6">
-            <button 
-              onClick={handleScrollToTop} 
+            <button
+              onClick={handleScrollToTop}
               className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 text-gray-400 hover:text-white transition-all"
             >
               <ChevronUp size={14} />

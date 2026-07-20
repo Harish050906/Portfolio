@@ -48,7 +48,7 @@ function PortraitModel() {
       // Smoothly rotate from Math.PI (180deg) to 0 (0deg)
       const currentRotation = modelRef.current.rotation.y;
       const targetRotation = 0;
-      
+
       if (currentRotation > 0.005) {
         // Linear interpolation to make the animation butter-smooth
         modelRef.current.rotation.y = THREE.MathUtils.lerp(currentRotation, targetRotation, delta * 2.0);
@@ -73,7 +73,7 @@ export default function HeroSection() {
       <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
 
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
-        
+
         {/* Left Column - 3D Scene */}
         <div className="relative h-[450px] lg:h-[600px] w-full rounded-3xl glassmorphism-card overflow-hidden group border border-white/5 shadow-inner">
           {/* Neon corner indicators */}
@@ -88,7 +88,7 @@ export default function HeroSection() {
             ACTIVE_3D_LOBBY
           </div>
 
-          <Canvas 
+          <Canvas
             camera={{ position: [0, 0, 4.5], fov: 45 }}
             className="w-full h-full cursor-grab active:cursor-grabbing"
             gl={{ antialias: true, preserveDrawingBuffer: true }}
@@ -99,7 +99,7 @@ export default function HeroSection() {
             <pointLight position={[0, 3, 2]} intensity={1.0} color="#8b5cf6" />
             <Suspense fallback={<Loader />}>
               <PortraitModel />
-              <OrbitControls 
+              <OrbitControls
                 enableZoom={false}
                 enablePan={false}
                 minPolarAngle={Math.PI / 3}
@@ -109,7 +109,7 @@ export default function HeroSection() {
               />
             </Suspense>
           </Canvas>
-          
+
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
             <span className="text-[10px] tracking-widest text-gray-400 font-mono uppercase bg-dark-900/80 px-4 py-1.5 rounded-full border border-white/5">
               Drag to Rotate &bull; Dynamic Intro
@@ -132,12 +132,12 @@ export default function HeroSection() {
                 Harish A
               </span>
             </h1>
-            
+
             <p className="text-lg text-brand-cyan font-semibold flex items-center gap-2">
               <Cpu size={18} /> Chennai Institute of Technology
             </p>
             <p className="text-sm text-gray-400 font-mono -mt-1">
-              B.Tech in Artificial Intelligence and Machine Learning (Expected Graduation: 2028) &bull; CGPA: 7.78
+              B.Tech in Artificial Intelligence and Machine Learning (Expected Graduation: 2028)
             </p>
           </div>
 
@@ -146,14 +146,14 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <a 
-              href="#projects" 
+            <a
+              href="#projects"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-brand-purple to-brand-blue rounded-xl font-medium text-white hover:opacity-90 shadow-lg hover:shadow-brand-purple/20 transition-all"
             >
               Explore Projects <ArrowRight size={16} />
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-dark-800 hover:bg-dark-700 border border-white/10 rounded-xl font-medium text-gray-300 hover:text-white transition-all"
             >
               Get In Touch
