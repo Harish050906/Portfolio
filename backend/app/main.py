@@ -22,6 +22,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Root path route
+@app.get("/")
+def read_root():
+    """
+    Root health check endpoint returning API operational status.
+    """
+    return {"status": "ok", "message": "Harish Portfolio API is running!"}
+
 # Static achievements payload
 ACHIEVEMENTS_DATA = [
     {
