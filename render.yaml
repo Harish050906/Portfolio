@@ -1,0 +1,37 @@
+services:
+  # 1. FastAPI Backend (Web Service)
+  - type: web
+    name: harish-portfolio-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    plan: free # Free tier or specify custom plans
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: harish-portfolio-db
+          property: connectionString
+      - key: GITHUB_USERNAME
+        value: harisha-aiml
+      - key: GITHUB_TOKEN
+        sync: false # User to fill manually in Render Dashboard if needed
+
+  # 2. React Frontend (Static Site)
+  - type: static
+    name: harish-portfolio-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    publishDir: dist
+    baseDir: frontend
+    routes:
+      # Seamless SPA redirect to handle client-side routing
+      - src: /*
+        dest: /index.html
+        type: rewrite
+
+# 3. PostgreSQL/PostGIS Database
+databases:
+  - name: harish-portfolio-db
+    plan: free
+    postgresMajorVersion: 15
